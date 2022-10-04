@@ -15,7 +15,7 @@ body, p, a, ul, li {
     text-decoration: none;
 }
  .project-img {
-    
+        
   
     background-size: cover;
     
@@ -28,6 +28,10 @@ body, p, a, ul, li {
 body {
     background: var(--secondary);
     overflow-x: hidden;
+}
+
+img {
+    border-radius: 20px;
 }
 
 .button {
@@ -53,6 +57,19 @@ input,textarea {
     border: 2px solid #9893d8;
     color: #f2f2f2;
 }
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact p {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
 
 /* fonts */
 * {
@@ -85,12 +102,12 @@ h4 {
 .leading {
     font-size: 1.1em;
     overflow-wrap: break-word;
-    padding-right: 1em;
 }
 /* mobile styles */
 .grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
 }
 
 .site-nav {
@@ -114,6 +131,7 @@ h4 {
 
 .welcome-text {
     grid-column: 1/6;
+    margin-right: 20px;;
     
 }
 .welcome-img {
@@ -174,10 +192,12 @@ h4 {
     margin: 40px 0;
 }
 #skills li {
-    padding: 10px;
+    padding: 1em;
+    margin: 10px;
     background: rgba( 0, 0, 0, 0.2);
     grid-column: span 4;
     text-align: center;
+    border-radius: 20px;
 }
 
 #skills img {
@@ -238,13 +258,105 @@ footer img {
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
-
+    .welcome-text {
+            grid-column: 1/5;
+    }
+    .welcome-img{
+        grid-column: 5/9;
+    }
+    .welcome-img img {
+        width: 100%;
+    }
+    .projects{
+        margin-top: 40px;
+    }
+    .projects a {
+        grid-column: span 4;
+        display: block;
+        margin: 20px 0;
+    }
+    .projects a:last-child {
+        grid-column: 3/7;
+    }
+    .projects a * {
+       
+        max-width: 60%;
+        margin: 10px 20%;
+    }
+    .projects h4 {
+        text-align: center;
+    }
+    #skills {
+        padding: 30px 100px;
+    }
+    
 }
 
 /* Large tablets and latptop styles */
 @media screen and (min-width: 960px) {
     body {
         font-size: 18px;
+    }
+    .grid {
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .leading {
+        margin: 20px 0; 
+    }
+    .site-nav {
+        padding: 0 20px;
+    }
+    .site-nav h1 {
+        grid-column: 1/3;
+    }
+    .site-nav ul {
+        display: flex;
+        grid-column: 6/9;
+        justify-content: flex-end;
+        align-self: center;
+    }
+    .site-nav li {
+        margin-left: 20px;
+    }
+    .welcome-text {
+        align-self: center
+    }
+    #welcome {
+        padding-bottom: 40px;
+    }
+    .projects a:nth-child(1) {
+        grid-column: 2/4;
+    }
+    .projects a:nth-child(2) {
+        grid-column: 4/6;
+        padding-top: 140px;
+    }
+    .projects a:nth-child(3) {
+        grid-column: 6/8;
+    }
+    .projects a * {
+        max-width: 80%;
+        margin: 10px 10%;
+    }
+    #skills {
+        padding: 30px 20px;
+        
+    }
+    #skills ul {
+        margin: 40px auto;
+    }
+    #skills li {
+        grid-column: span 2;
+        justify-content: center;
+    }
+    #skills li:nth-child(1){
+        grid-column: 2/4;
+    }
+    footer {
+        padding: 40px 20px;
     }
 }
 
@@ -253,33 +365,22 @@ footer img {
     body {
         font-size: 20px;
     }
+    #welcome, #portfolio, #skills, #contact {
+        padding: 90px 0;
+    }
+    .projects a:nth-child(1) {
+        grid-column: 1/3;
+    }
+    .projects a:nth-child(3) {
+        grid-column: 7/9;
+    }
+    .projects a * {
+        max-width: 100%;
+        margin: 30px 0;
+    }
+    footer {
+        padding: 80px;
+    }
 }
 
 
-/*.projects {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 10px;
-}
-
-.projects a {
-    text-align: center;
-    background: gray;
-    padding: 20px;
-}
-
-.projects a:nth-child(1) {
-    grid-column: 2/6;
-    grid-row: 1;
-}
-
-.projects a:nth-child(2) {
-    grid-column: 8/12;
-    grid-row: 1;
-}
-
-.projects a:nth-child(3) {
-    grid-column: 5/9;
-    grid-row: 2;
-}
-*/
